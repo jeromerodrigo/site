@@ -1,0 +1,8 @@
+<header id="nav-border" class="p-3">
+    <nav id="nav" class="nav d-flex align-items-center">
+        <a class="nav-link flex-grow-1" href="/">🤓 {{ .Site.Params.nameLower | safeHTML }}</a>
+        {{ range .Site.Menus.main }}
+            <a class="nav-link" href="{{ .URL }}">{{ .Name | safeHTML }}</a>
+        {{ end }}
+    </nav>
+</header>

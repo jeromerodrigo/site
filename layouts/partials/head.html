@@ -1,0 +1,11 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {{ $css := "css/bootstrap.min.css" | relURL }}
+    <link rel="stylesheet" href="{{ $css }}">
+    {{ $reset := resources.Get "css/reset.css" | resources.Minify }}
+    <link rel="stylesheet" href="{{ $reset.Permalink }}">
+    {{ $style := resources.Get "css/style.css" | resources.Minify }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    <title>{{ .Title }}</title>
+</head>

@@ -1,0 +1,52 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Jerome Rodrigo"
+
+[permalinks]
+    blog = "/:filename/"
+
+[menu]
+    [[menu.main]]
+        name = "Home"
+        pre = "home"
+        url = "/"
+        weight = 1
+
+    [[menu.main]]
+        name = "Blog"
+        pre = "edit"
+        url = "/blog/"
+        weight = 2
+    
+    [[menu.main]]
+        name = "Tags"
+        pre = "tag"
+        url = "/tags/"
+        weight = 3
+
+[params]
+    dateFormat = "Jan 2, 2006"
+
+    jumboGreeting = "Hi there! 👋"
+    jumboTitle = "I'm Jerome Rodrigo."
+    jumboSubtitle = "Software Engineer [@ServiceRocket](https://servicerocket.com) 🚀"
+    
+    descriptionHeading = "I specialise in building web apps."
+    descriptionText = """\
+        It's my passion to solve challenging problems with scalable solutions. \
+        Being a polyglot, I adapt to the needs of the team and at the same time \
+        enjoy picking up new tech along the way. \
+        \
+        I've also held various roles such as **Scrum Master** & **Software Developer**. \
+        These days I'm focusing on the technical side of things.
+        """
+
+    nameLower = "jeromerodrigo"
+
+    footerLine = "Made with ❤️ by [@jeromerodrigo](https://github.com/jeromerodrigo)"
+    footerCopyright = "Jerome Rodrigo. All rights reserved."
+
+    companies = [ "img/seb.png", "img/danica.jpg", "img/servicerocket.png", "img/inscale-logo.svg" ]
+
+[taxonomies]
+    tag = "tags"

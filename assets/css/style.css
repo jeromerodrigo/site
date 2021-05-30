@@ -1,0 +1,67 @@
+
+body {
+    position: relative;
+}
+
+main {
+    padding-bottom: 5rem;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.nav-link {
+    font-weight: bold;
+    color: black;
+}
+
+.profile-picture {
+    border-radius: 100%;
+}
+
+.nav-picture {
+    max-height: 3rem;
+}
+
+/* Remove link decoration */
+#home-jumbotron a {
+    text-decoration: none;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.card a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.company {
+    max-width: 10em;
+    display: inline-block;
+}
+
+.footer {
+    height: 5rem;
+    width: 100%;
+    background-color: black !important;
+    color: white;
+    position: absolute;
+    bottom: 0;
+}
+
+article {
+    max-width: 60vw;
+    margin: 0 auto;
+}

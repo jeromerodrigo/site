@@ -1,0 +1,45 @@
+{{ define "main" }}
+
+<section>
+    <div id="home-jumbotron" class="row m-3 align-items-center">
+        <div class="col-sm-7">
+            <div>
+                <p class="fs-4">{{ .Site.Params.jumboGreeting }}</p>
+                <h1 class="display-4 text-nowrap">{{ .Site.Params.jumboTitle }}</h1>
+                <p class="pt-2 fs-5 text-muted">{{ .Site.Params.jumboSubtitle | markdownify }}</p>
+                
+            </div>
+        </div>
+        <div class="col-sm">
+            {{ $profile := "img/profile.jpg" | relURL }}
+            <img src="{{ $profile }}" class="img-fluid float-end profile-picture" />
+        </div>
+    </div>
+</section>
+<section class="mt-5">
+    <div id="home-description" class="row m-3 align-items-center">
+        <div class="col">
+            <div class="m-2 p-5">
+                <h1 class="display-1">6+</h1>
+                <p class="fs-5">years of working experience</p>
+            </div>
+            <div>
+                {{ range .Site.Params.Companies }}
+                    {{ $src := . | relURL }}   
+                    <img class="company m-3" src={{ $src }} />
+                {{ end }}
+            </div>
+        </div>
+        <div class="col-sm">
+            <h1>{{ .Site.Params.descriptionHeading }}</h1>
+            <p class="pt-2 fs-5">{{ .Site.Params.descriptionText | markdownify }}</p>
+        </div>
+    </div>
+</section>
+
+<div id="home-experience">
+    
+    <div></div>
+</div>
+
+{{ end }}
