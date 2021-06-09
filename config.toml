@@ -33,11 +33,11 @@ title = "Jerome Rodrigo"
     
     descriptionHeading = "I specialise in building web apps."
     descriptionText = """\
-        It's my passion to solve challenging problems with scalable solutions. \
-        Being a polyglot, I adapt to the needs of the team and at the same time \
+        It's my passion to solve challenging problems that help real people. \
+        Being a polyglot, I adapt to the needs of the team and \
         enjoy picking up new tech along the way. \
         \
-        I've also held various roles such as **Scrum Master** & **Software Developer**. \
+        I've held various roles such as **Scrum Master** & **Software Developer**. \
         These days I'm focusing on the technical side of things.
         """
 
@@ -46,7 +46,16 @@ title = "Jerome Rodrigo"
     footerLine = "Made with ❤️ by [@jeromerodrigo](https://github.com/jeromerodrigo)"
     footerCopyright = "Jerome Rodrigo. All rights reserved."
 
-    companies = [ "img/seb.png", "img/danica.jpg", "img/servicerocket.png", "img/inscale-logo.svg" ]
+    companies = [ "img/inscale-logo.svg", "img/seb.png", "img/danica.jpg", "img/servicerocket.png"  ]
+    tech = [ 
+        "img/tech/java.png", 
+        "img/tech/javascript.png", 
+        "img/tech/c-sharp.png",
+        "img/tech/nodejs.png"
+    ]
+
+    githubUrl = "https://github.com/jeromerodrigo"
+    linkedinUrl = "https://www.linkedin.com/in/jeromerodrigo"
 
 [taxonomies]
     tag = "tags"

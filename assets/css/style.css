@@ -1,6 +1,7 @@
 
 body {
     position: relative;
+    background: linear-gradient(286deg, rgba(255,255,255,1) 0%, rgba(235,235,235,1) 65%, rgb(255, 255, 255) 100%);
 }
 
 main {
@@ -22,6 +23,12 @@ main {
     border-radius: 100%;
 }
 
+.badge-icon {
+    display: inline;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
 .nav-picture {
     max-height: 3rem;
 }
@@ -35,16 +42,8 @@ main {
     text-decoration: none;
 }
 
-.card a {
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#home-description .card {
+    min-width: 9rem;
 }
 
 .company {

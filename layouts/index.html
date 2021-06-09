@@ -1,45 +1,48 @@
 {{ define "main" }}
 
 <section>
-    <div id="home-jumbotron" class="row m-3 align-items-center">
+    <div id="home-jumbotron" class="row align-items-center">
         <div class="col-sm-7">
-            <div>
-                <p class="fs-4">{{ .Site.Params.jumboGreeting }}</p>
-                <h1 class="display-4 text-nowrap">{{ .Site.Params.jumboTitle }}</h1>
-                <p class="pt-2 fs-5 text-muted">{{ .Site.Params.jumboSubtitle | markdownify }}</p>
-                
+            <div class="m-3">
+                <h3>{{ .Site.Params.jumboGreeting }}</h3>
+                <h1 class="display-3 text-nowrap">{{ .Site.Params.jumboTitle }}</h1>
+                <h5 class="mt-2 text-muted text-nowrap">{{ .Site.Params.jumboSubtitle | markdownify }}</h5>
             </div>
         </div>
-        <div class="col-sm">
+        <div class="col">
             {{ $profile := "img/profile.jpg" | relURL }}
-            <img src="{{ $profile }}" class="img-fluid float-end profile-picture" />
+            <img src="{{ $profile }}" class="profile-picture" />
         </div>
     </div>
 </section>
 <section class="mt-5">
     <div id="home-description" class="row m-3 align-items-center">
-        <div class="col">
-            <div class="m-2 p-5">
-                <h1 class="display-1">6+</h1>
-                <p class="fs-5">years of working experience</p>
-            </div>
-            <div>
-                {{ range .Site.Params.Companies }}
-                    {{ $src := . | relURL }}   
-                    <img class="company m-3" src={{ $src }} />
-                {{ end }}
-            </div>
-        </div>
-        <div class="col-sm">
+        <div class="col-sm order-md-last">
             <h1>{{ .Site.Params.descriptionHeading }}</h1>
             <p class="pt-2 fs-5">{{ .Site.Params.descriptionText | markdownify }}</p>
+        </div>
+        <div class="col-sm">
+            <div class="row align-items-center">
+                <div class="col card p-4 d-inline-block">
+                    <h1>6+</h1>
+                    <p class="fs-5">years of working experience</p>
+                </div>
+                {{ range .Site.Params.Companies }}
+                    {{ $src := . | relURL }}
+                    <div class="col p-2"><img class="company img-fluid" src={{ $src }} /></div>
+                {{ end }}
+            </div>
         </div>
     </div>
 </section>
 
-<div id="home-experience">
-    
-    <div></div>
-</div>
+<section class="mt-5">
+    <div id="home-tech">
+        <div class="row">
+            <h1 class="display-6 text-center">I'm familiar with...</h1>
+        </div>
+        
+    </div>
+</section>
 
 {{ end }}
