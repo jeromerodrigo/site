@@ -1,10 +1,15 @@
 <head>
     <meta charset="utf-8">
+    <meta 
+        name="description"
+        content="{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Site.Params.Description }}{{ end }}">
+    {{ $icon := "img/favicon.ico" | relURL }}
+    <link rel="shortcut icon" href="{{ $icon }}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {{ $css := "css/bootstrap.min.css" | relURL }}
     <link rel="stylesheet" href="{{ $css }}">
-    {{ $reset := resources.Get "css/reset.css" | resources.Minify }}
-    <link rel="stylesheet" href="{{ $reset.Permalink }}">
+    {{ $reset := "css/bootstrap-reboot.min.css" | relURL }}
+    <link rel="stylesheet" href="{{ $reset }}">
     {{ $style := resources.Get "css/style.css" | resources.Minify }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
     <title>{{ .Title }}</title>

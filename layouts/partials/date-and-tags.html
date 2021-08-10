@@ -7,7 +7,7 @@
         <br />
         {{ range . }}
         {{ $href := print (relURL "tags/") (urlize .) }}
-        <a class="btn btn-sm btn-outline-dark tag-btn" href="{{ $href }}">{{ . }}</a>
+        <a class="badge bg-dark" href="{{ $href }}">{{ . }}</a>
         {{ end }}
     {{ end }}
 

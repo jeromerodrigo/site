@@ -11,4 +11,27 @@ Hello world.
 
 It's been a while since I've written a blog.
 
-TODO
+## Why hugo
+
+## Setup
+
+- Talk about template
+- Bootstrap 5.0 for UI
+- Inspiration from Dribbble.com
+
+## The journey
+
+- Off and on, didn't have ideas for the projects and skills section
+
+## Challenges
+
+- Responsive layout, learning about breakpoints
+    - Bootstrap help a lot
+- String concatenation
+- Structured data, then learnt about the /data folder
+
+## Learnings
+
+## Conclusion
+
+- Future ideas to pursue

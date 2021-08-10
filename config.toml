@@ -1,9 +1,6 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "Jerome Rodrigo"
-
-[permalinks]
-    blog = "/:filename/"
+baseURL = "https://jeromerodrigo.xyz/"
+languageCode = "en"
+title = "Jerome Rodrigo | Full Stack Software Developer"
 
 [menu]
     [[menu.main]]
@@ -17,44 +14,19 @@ title = "Jerome Rodrigo"
         pre = "edit"
         url = "/blog/"
         weight = 2
-    
-    [[menu.main]]
-        name = "Tags"
-        pre = "tag"
-        url = "/tags/"
-        weight = 3
 
 [params]
-    dateFormat = "Jan 2, 2006"
+    description = """\
+    The personal site & blog of jeromerodrigo.\
+    """
 
-    jumboGreeting = "Hi there! 👋"
-    jumboTitle = "I'm Jerome Rodrigo."
-    jumboSubtitle = "Software Engineer [@ServiceRocket](https://servicerocket.com) 🚀"
-    
-    descriptionHeading = "I specialise in building web apps."
-    descriptionText = """\
-        It's my passion to solve challenging problems that help real people. \
-        Being a polyglot, I adapt to the needs of the team and \
-        enjoy picking up new tech along the way. \
-        \
-        I've held various roles such as **Scrum Master** & **Software Developer**. \
-        These days I'm focusing on the technical side of things.
-        """
+    dateFormat = "Jan 2, 2006"
 
     nameLower = "jeromerodrigo"
 
     footerLine = "Made with ❤️ by [@jeromerodrigo](https://github.com/jeromerodrigo)"
-    footerCopyright = "Jerome Rodrigo. All rights reserved."
+    footerCopyright = "Jerome Rodrigo."
 
-    companies = [ "img/inscale-logo.svg", "img/seb.png", "img/danica.jpg", "img/servicerocket.png"  ]
-    tech = [ 
-        "img/tech/java.png", 
-        "img/tech/javascript.png", 
-        "img/tech/c-sharp.png",
-        "img/tech/nodejs.png"
-    ]
-
-    githubUrl = "https://github.com/jeromerodrigo"
     linkedinUrl = "https://www.linkedin.com/in/jeromerodrigo"
 
 [taxonomies]

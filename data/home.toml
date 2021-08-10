@@ -1,0 +1,153 @@
+jumboGreeting = "Hi there! 👋"
+jumboTitle = "I'm Jerome."
+jumboSubtitle = "Full Stack Software Developer"
+
+descriptionHeading = "I specialise in building web apps."
+
+myWorkText = """\
+    I enjoy spending my free time working on various side projects. \
+    Here's a few notable ones I've done over the past few years. \
+    """
+
+descriptions = [
+"""\
+It's my passion to solve challenging problems that help real people. \
+Being a polyglot, I adapt to the needs of the team and \
+enjoy picking up new tech along the way. \
+""",
+"""\
+I've held various roles such as **Scrum Master** & **Software Developer**. \
+I believe in servant leadership and trust smart people to do great work. \
+Currently I'm focusing on the technical side of things as a Software Engineer at [ServiceRocket](https://servicerocket.com).
+"""
+]
+
+[[projects]]
+name = "[Design] OptiTask 2"
+period = "Nov 2020"
+description = """
+Yet another [Pomodoro timer](http://pomodorotechnique.com/) app with a greater \
+focus on mobile centric design.
+"""
+link = "https://www.figma.com/file/ZIIIWCTv5792cs9ii1q82z/OptiTask?node-id=0%3A1"
+img = "optitask2.png"
+vid = ""
+
+[[projects]]
+name = "PickUpGame"
+period = "2015 - 2017"
+description = """
+A social sports app. Find people nearby that are playing your sport. \
+Organize sports with friends and let the app handle notifications and \
+reminders. The app has multiple components, including native mobile apps and \
+a REST API backend. \
+"""
+link = ""
+img = "pug.png"
+vid = ""
+
+[[projects]]
+name = "LucidEngine"
+period = "Sep 2014"
+description = """\
+A minimal game engine for 2D games. \
+Being a gamer myself, I was intrigued about how game engines work. \
+So I decided to make one from scratch. \
+It uses the [LWJGL](https://www.lwjgl.org/) library for doing 2D rendering with support for [TiledMaps](https://www.mapeditor.org/). \
+It was an interesting personal project to work on as I learnt the basics of designing a game engine. \
+"""
+link = "https://github.com/jeromerodrigo/LucidEngine"
+img = ""
+vid = "journey-to-helios-1.webm"
+
+[[projects]]
+name = "OptiTask"
+period = "May 2012 – Aug 2012"
+description = """\
+A simple [Pomodoro timer](http://pomodorotechnique.com/), to optimise the usage of your time. \
+Worked on it during college semester break for about 3-4 weeks for the first release. \
+This mini-project helped me become more accustomed to best practices, software design and as a good way to spend free time. \
+Code is open sourced and available on [GitHub](https://github.com/jeromerodrigo/OptiTask). \
+It was also featured on [Softpedia](https://www.softpedia.com/get/Desktop-Enhancements/Clocks-Time-Management/Rodrigo-OptiTask.shtml).
+"""
+link = "https://www.softpedia.com/get/Desktop-Enhancements/Clocks-Time-Management/Rodrigo-OptiTask.shtml"
+img = "optitask.png"
+vid = ""
+
+[[tech]]
+categoryName = "Languages"
+items = [ "Java", "C#", "Kotlin", "SQL", "HTML/CSS", "JavaScript", "TypeScript", "Python" ]
+
+[[tech]]
+categoryName = "Frameworks & Tools"
+items = [ "React", "Serverless", "Spring", "NodeJS", "Docker", "Selenium", "OpenAPI/Swagger" ]
+
+[[tech]]
+categoryName = "Techniques"
+items = [ "Agile", "Kanban", "Scrum", "Pair Programming", "SOLID", "MVC" ]
+
+[[companies]]
+name = "Inscale Asia Sdn. Bhd."
+img = "img/inscale-logo.svg"
+
+[[companies]]
+name = "SEB Pension"
+img = "img/seb.png"
+
+[[companies]]
+name = "Danske Bank"
+img = "img/danske-bank-logo.svg"
+
+[[companies]]
+name = "ServiceRocket"
+img = "img/servicerocket.png"
+
+[[certifications]]
+name = "MCSA: Web Applications - Certified 2018"
+issuer = "Microsoft"
+date = "Sep 2018"
+link = "https://www.youracclaim.com/badges/ae560e94-caf8-4a15-bddf-c103c54ca17b/linked_in_profile"
+img = "img/microsoft.svg"
+
+[[certifications]]
+name = "MCSD: App Builder - Certified 2018"
+issuer = "Microsoft"
+date = "Sep 2018"
+link = "https://www.youracclaim.com/badges/fd35850c-e79a-4b5b-b18f-8e76142e9103/linked_in_profile"
+img = "img/microsoft.svg"
+
+[[certifications]]
+name = "ICAgile Certified Professional"
+issuer = "ICAgile"
+date = "May 2014"
+link = "https://www.icagile.com/Certification/Verify-Credentials/ctl/UserDetails/mid/697/uid/a8381c01-85ce-4ea2-83b6-80df1818033d"
+img = "img/icagile.jpg"
+
+[[certifications]]
+name = "Microsoft Specialist: Programming in C# Specialist"
+issuer = "Microsoft"
+date = "Oct 2013"
+link = "https://www.youracclaim.com/badges/9f39880a-88ea-4103-a4a8-3c7777de502d/public_url"
+img = "img/microsoft.svg"
+
+[[certifications]]
+name = "Oracle Certified Associate, Java SE 7 Programmer I"
+issuer = "Oracle"
+date = "Jul 2013"
+link = ""
+img = "img/oracle-logo.png"
+
+[[socials]]
+name = "GitHub"
+link = "https://github.com/jeromerodrigo"
+img = "img/github.png"
+
+[[socials]]
+name = "LinkedIn"
+link = "https://www.linkedin.com/in/jeromerodrigo"
+img = "img/linkedin-normal.png"
+
+[[socials]]
+name = "HackerRank"
+link = "https://www.hackerrank.com/jeromerodrigo"
+img = "img/hackerrank-logo.png"

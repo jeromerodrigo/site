@@ -1,48 +1,148 @@
 {{ define "main" }}
 
-<section>
-    <div id="home-jumbotron" class="row align-items-center">
-        <div class="col-sm-7">
-            <div class="m-3">
-                <h3>{{ .Site.Params.jumboGreeting }}</h3>
-                <h1 class="display-3 text-nowrap">{{ .Site.Params.jumboTitle }}</h1>
-                <h5 class="mt-2 text-muted text-nowrap">{{ .Site.Params.jumboSubtitle | markdownify }}</h5>
-            </div>
-        </div>
-        <div class="col">
-            {{ $profile := "img/profile.jpg" | relURL }}
-            <img src="{{ $profile }}" class="profile-picture" />
-        </div>
-    </div>
-</section>
-<section class="mt-5">
-    <div id="home-description" class="row m-3 align-items-center">
-        <div class="col-sm order-md-last">
-            <h1>{{ .Site.Params.descriptionHeading }}</h1>
-            <p class="pt-2 fs-5">{{ .Site.Params.descriptionText | markdownify }}</p>
-        </div>
-        <div class="col-sm">
-            <div class="row align-items-center">
-                <div class="col card p-4 d-inline-block">
-                    <h1>6+</h1>
-                    <p class="fs-5">years of working experience</p>
-                </div>
-                {{ range .Site.Params.Companies }}
-                    {{ $src := . | relURL }}
-                    <div class="col p-2"><img class="company img-fluid" src={{ $src }} /></div>
-                {{ end }}
-            </div>
-        </div>
-    </div>
-</section>
+<div class="gap"></div>
+<section id="home-jumbotron" class="row align-items-center">
+    <div class="col-sm-7">
+        <div class="m-3">
+            <h3>{{ .Site.Data.home.jumboGreeting }}</h3>
+            <h1 class="display-3">{{ .Site.Data.home.jumboTitle }}</h1>
+            <h5 class="mt-2 mb-4 text-muted">{{ .Site.Data.home.jumboSubtitle | markdownify }}</h5>
 
-<section class="mt-5">
-    <div id="home-tech">
-        <div class="row">
-            <h1 class="display-6 text-center">I'm familiar with...</h1>
+            <a class="btn btn-primary" href="{{ .Site.Params.linkedinUrl }}" target="_blank" rel="noreferrer">Get in touch</a>
         </div>
-        
+    </div>
+    <div class="col">
+        {{ $profile := "img/profile.jpg" | relURL }}
+        <img src="{{ $profile }}" class="profile-picture" alt="Profile picture of {{ .Site.Params.nameLower }}" />
     </div>
 </section>
+<div class="gap"></div>
+<section id="home-description" class="row m-3 align-items-center">
+    <div class="col-sm p-3 order-sm-last">
+        <h2 class="mb-3 display-5">{{ .Site.Data.home.descriptionHeading }}</h2>
+
+        {{ range .Site.Data.home.descriptions }}
+        <p>{{ . | markdownify }}</p>
+        {{ end }}
+    </div>
+    <div class="col-sm">
+        <div class="row align-items-center">
+            <div class="col card p-3 company">
+                <h1>{{ sub now.Year 2014 }}+</h1>
+                <p class="fs-5">years of working experience</p>
+            </div>
+            {{ range .Site.Data.home.companies }}
+            {{ $src := index .img | relURL }}
+            <div class="p-3 company col">
+                <img src={{ $src }} alt="{{ index .name }}" />
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+<div class="gap"></div>
+<section id="home-tech">
+    <div class="mb-5 text-center">
+        <h2 class="display-5">My Toolbox</h2>
+    </div>
+    <div class="row text-center">
+        {{ range .Site.Data.home.tech }}
+        <div class="mb-3 col-md">
+            <h3>{{ index .categoryName }}</h3>
+            {{ range index .items }}
+                <span class="badge p-2 m-1 fs-5 bg-dark">{{ . }}</span>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</section>
+<div class="gap"></div>
+<section id="home-my-work">
+    <div class="mb-5 text-center">
+        <h2 class="display-5">My Work</h2>
+        <p>{{ .Site.Data.home.myWorkText }}</p>
+    </div>
+    <div class="row">
+        {{ range .Site.Data.home.projects }}
+        <div class="col-12 col-sm-6 col-md-4">
+            <div class="card mb-3">
+                {{ $filename := index .img }}
+                {{ if ne $filename "" }}
+                {{ $url := print "img/" $filename }}
+                {{ $image :=  $url | relURL }}
+                <img src="{{ $image }}" class="card-img-top" alt="Project image">
+                {{ end }}
+
+                {{ $video := index .vid }}
+                {{ if ne $video "" }}
+                {{ $url := print "video/" $video }}
+                {{ $videoUrl := $url | relURL }}
+                <video autoplay muted loop>
+                    <source src="{{ $videoUrl }}" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                {{ end }}
+
+                <div class="card-body">
+                    <h5 class="card-title">{{ index .name }}</h5>
+                    <h6 class="text-muted">{{ index .period }}</h6>
+                    <p class="card-text">{{ index .description | markdownify }}</p>
+
+                    {{ $link := index .link }}
+                    {{ if ne $link "" }}
+                    <a href="{{ $link }}" rel="noreferrer" target="_blank" class="btn btn-primary">See more »</a>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>
+<div class="gap"></div>
+<section id="home-certifications">
+    <div class="text-center mb-5">
+        <h2 class="display-5">Certifications</h2>
+    </div>
+    <div class="row mb-3">
+        {{ range .Site.Data.home.certifications }}
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-4">
+                        {{ $src := index .img | relURL }}
+                        <img src="{{ $src }}" alt="{{ index .name }}">
+                    </div>
+                    <div class="col-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ index .name }}</h5>
+                            <p class="card-text">{{ index .issuer }} <small class="text-muted">- {{ index .date }}</small></p>
+                            
+                            {{ if ne (index .link) "" }}
+                            <a href="{{ index .link }}" rel="noreferrer" target="_blank">See credential</a>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+    
+</section>
+<div class="gap"></div>
+<section id="home-contact">
+    <div class="text-center mb-5">
+        <h2 class="display-5">Get in touch</h2>
+    </div>
+    <div class="text-center mb-3">
+        {{ range .Site.Data.home.socials }}
+        <a href="{{ index .link }}" target="_blank" rel="noreferrer">
+            {{ $logo := index .img | relURL }}
+            <img class="m-1 badge-icon" src="{{ $logo }}" alt="{{ index .name }}" />
+        </a>
+        {{ end }}        
+    </div>
+</section>
+<div class="gap"></div>
 
 {{ end }}

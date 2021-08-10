@@ -1,21 +1,21 @@
 
 body {
     position: relative;
-    background: linear-gradient(286deg, rgba(255,255,255,1) 0%, rgba(235,235,235,1) 65%, rgb(255, 255, 255) 100%);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(235,235,235,1) 65%, rgb(255, 255, 255) 100%);
 }
 
 main {
     padding-bottom: 5rem;
 }
 
-.sticky {
-    position: fixed;
-    top: 0;
+img {
+    height: 100%;
     width: 100%;
+    object-fit: contain;
 }
 
 .nav-link {
-    font-weight: bold;
+    max-width: max-content;
     color: black;
 }
 
@@ -29,30 +29,21 @@ main {
     width: 2.5rem;
 }
 
-.nav-picture {
-    max-height: 3rem;
-}
-
 /* Remove link decoration */
-#home-jumbotron a {
+a {
     text-decoration: none;
-}
-
-.footer a {
-    text-decoration: none;
-}
-
-#home-description .card {
-    min-width: 9rem;
 }
 
 .company {
-    max-width: 10em;
+    min-width: 10rem;
+    max-width: 12rem;
+    max-height: 12rem;
     display: inline-block;
 }
 
 .footer {
-    height: 5rem;
+    max-height: 20rem;
+    padding: 1rem;
     width: 100%;
     background-color: black !important;
     color: white;
@@ -63,4 +54,21 @@ main {
 article {
     max-width: 60vw;
     margin: 0 auto;
+}
+
+.gap {
+    height: 10vw;
+}
+
+.blog-list {
+    min-height: 100vh;
+}
+
+a.btn {
+    background-color: #000;
+    border-color: #444;
+}
+
+#home-certifications img {
+    max-height: 10rem;
 }
