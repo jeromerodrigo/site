@@ -1,10 +1,13 @@
 # site
 
-Personal site & blog of Jerome Rodrigo. Built using the [Hugo](https://gohugo.io/) static site generator.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8dd06d08-6e69-48c3-a367-7c310c94aebd/deploy-status)](https://app.netlify.com/sites/jeromerodrigo/deploys)
+![GitHub](https://img.shields.io/github/license/jeromerodrigo/site)
+
+Personal site & blog. Built using the [Hugo](https://gohugo.io/) static site generator.
 
 ## Prerequisites
 
-- Ensure [Hugo](https://gohugo.io/getting-started/quick-start/#step-1-install-hugo) is installed
+- Ensure that [Hugo](https://gohugo.io/getting-started/quick-start/#step-1-install-hugo) is installed
 
 ## Local development
 
