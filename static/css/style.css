@@ -3,6 +3,7 @@ body {
     position: relative;
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(235,235,235,1) 65%, rgb(255, 255, 255) 100%);
     font-family: Tahoma, sans-serif;
+    min-height: 100vh;
 }
 
 main {
@@ -15,9 +16,16 @@ img {
     object-fit: contain;
 }
 
-/* Remove link decoration */
 a {
     text-decoration: none;
+}
+
+h1 {
+    font-size: 3.5em;
+}
+
+h2 {
+    font-size: 2.5em;
 }
 
 .nav-bar {
@@ -27,6 +35,10 @@ a {
 .nav-link {
     width: max-content;
     color: black;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
 }
 
 .profile-picture {
@@ -75,12 +87,12 @@ article {
     height: 10vw;
 }
 
-.list {
-    min-height: 90vh;
+.list .col > div > a {
+    color: black;
 }
 
-.list .col {
-    max-width: 20rem;
+.list .col > div > a:hover {
+    text-decoration: underline;
 }
 
 a.btn {
