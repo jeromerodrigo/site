@@ -1,12 +1,10 @@
 ---
-title: "Hello World"
+title: "Hello (again)"
 date: 2021-08-14T18:00:00+08:00
 tags: ["hugo", "web", "personal"]
 draft: false
 summary: "New personal site & fun with hugo static site generator."
 ---
-
-# 👋 Hello (again)
 
 It's been a while since I've written a blog. And when I say "a while"
 it's actually been more than a decade. However, blogging was where I started
@@ -41,17 +39,17 @@ The designs people upload here are just amazing. This really helped inspire how 
 
 Good for me since I'm not a professional designer. Best to learn from others!
 
-## 🔨 Challenges & 💡 Learnings
+## 🔨 Challenges & Learnings
 
-### #1 Making designs
+### Making designs
 
 I think I spent a lot longer than I intended in designing the projects and skills section. However once I got started, everything fell into place 🙂
 
-### #2 Implementing **responsive layout** involved a lot of trial and error
+### Implementing **responsive layout** involved a lot of trial and error
 
 After many tries I managed to get it just nice, thanks to the [docs](https://getbootstrap.com/docs/5.1/layout/grid/).
 
-### #3 String concatenation
+### String concatenation
 
 This shouldn't be an issue in plain Golang. However in the context of Hugo
 I couldn't really figure out what was the best way to concatenate two strings.
@@ -65,11 +63,11 @@ This is what I ended up with
 
 Feels a bit strange to use a `print` function to combine `video/` and the `#video` variable that holds the actual video file name.
 
-### #4 Avoiding repetition in `hugo`
+### Avoiding repetition in `hugo`
 
 Hugo has great templating features that I wished I knew earlier. I had already spent a considerable amount of time hand-coding a lot of the HTML.
 
-After learning to do this
+After learning to do this:
 ```html
 {{ range .Site.Data.home.projects }}
 <div>{{ index .name }}</div>
