@@ -5,7 +5,7 @@
     <div class="col-sm-7">
         <div class="m-3">
             <h3>{{ .Site.Data.home.jumboGreeting }}</h3>
-            <h1 class="display-3">{{ .Site.Data.home.jumboTitle }}</h1>
+            <h1>{{ .Site.Data.home.jumboTitle }}</h1>
             <h5 class="mt-2 mb-4 text-muted">{{ .Site.Data.home.jumboSubtitle | markdownify }}</h5>
 
             <a class="btn btn-primary" href="{{ .Site.Params.linkedinUrl }}" target="_blank" rel="noreferrer">Get in touch</a>
@@ -19,7 +19,7 @@
 <div class="gap"></div>
 <section id="home-description" class="row m-3 align-items-center">
     <div class="col-sm p-3 order-sm-last">
-        <h2 class="mb-3 display-5">{{ .Site.Data.home.descriptionHeading }}</h2>
+        <h2 class="mb-3">{{ .Site.Data.home.descriptionHeading }}</h2>
 
         {{ range .Site.Data.home.descriptions }}
         <p>{{ . | markdownify }}</p>
@@ -43,7 +43,7 @@
 <div class="gap"></div>
 <section id="home-tech">
     <div class="mb-5 text-center">
-        <h2 class="display-5">My Toolbox</h2>
+        <h2>My Toolbox</h2>
     </div>
     <div class="row text-center">
         {{ range .Site.Data.home.tech }}
@@ -59,7 +59,7 @@
 <div class="gap"></div>
 <section id="home-my-work">
     <div class="mb-5 text-center">
-        <h2 class="display-5">My Work</h2>
+        <h2>My Work</h2>
         <p>{{ .Site.Data.home.myWorkText }}</p>
     </div>
     <div class="row">
@@ -101,7 +101,7 @@
 <div class="gap"></div>
 <section id="home-certifications">
     <div class="text-center mb-5">
-        <h2 class="display-5">Certifications</h2>
+        <h2>Certifications</h2>
     </div>
     <div class="row mb-3">
         {{ range .Site.Data.home.certifications }}
@@ -132,7 +132,7 @@
 <div class="gap"></div>
 <section id="home-contact">
     <div class="text-center mb-5">
-        <h2 class="display-5">Get in touch</h2>
+        <h2>Get in touch</h2>
     </div>
     <div class="text-center mb-3">
         {{ range .Site.Data.home.socials }}

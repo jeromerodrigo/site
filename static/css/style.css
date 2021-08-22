@@ -2,6 +2,7 @@
 body {
     position: relative;
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(235,235,235,1) 65%, rgb(255, 255, 255) 100%);
+    font-family: Tahoma, sans-serif;
 }
 
 main {
@@ -14,8 +15,17 @@ img {
     object-fit: contain;
 }
 
+/* Remove link decoration */
+a {
+    text-decoration: none;
+}
+
+.nav-bar {
+    min-height: 2rem;
+}
+
 .nav-link {
-    max-width: max-content;
+    width: max-content;
     color: black;
 }
 
@@ -29,11 +39,6 @@ img {
     width: 2.5rem;
 }
 
-/* Remove link decoration */
-a {
-    text-decoration: none;
-}
-
 .company {
     min-width: 10rem;
     max-width: 12rem;
@@ -42,17 +47,27 @@ a {
 }
 
 .footer {
-    max-height: 20rem;
+    font-size: small;
     padding: 1rem;
     width: 100%;
     background-color: black !important;
     color: white;
     position: absolute;
     bottom: 0;
+    box-shadow: 0 -2px 2px 0 black;
+}
+
+.footer a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.footer small {
+    font-size: smaller;
 }
 
 article {
-    max-width: 60vw;
+    max-width: 50rem;
     margin: 0 auto;
 }
 
@@ -60,8 +75,12 @@ article {
     height: 10vw;
 }
 
-.blog-list {
-    min-height: 100vh;
+.list {
+    min-height: 90vh;
+}
+
+.list .col {
+    max-width: 20rem;
 }
 
 a.btn {

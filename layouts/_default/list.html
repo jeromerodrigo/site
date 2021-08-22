@@ -1,11 +1,11 @@
 {{ define "main" }}
 
-<section class="m-3 blog-list">
+<section class="m-3 list">
     <h1 class="mb-3">{{ .Title }}</h1>
     <div class="row">
         {{ range .Pages.ByPublishDate.Reverse }}
         <div class="col">
-            <div class="card p-3" style="width: 18rem;">
+            <div class="card p-3">
                 <div class="card-title">
                     <a class="" href="{{ .RelPermalink }}">{{ .Title }}</a>
                 </div>

@@ -138,14 +138,14 @@ link = ""
 img = "img/oracle-logo.png"
 
 [[socials]]
-name = "GitHub"
-link = "https://github.com/jeromerodrigo"
-img = "img/github.png"
-
-[[socials]]
 name = "LinkedIn"
 link = "https://www.linkedin.com/in/jeromerodrigo"
 img = "img/linkedin-normal.png"
+
+[[socials]]
+name = "GitHub"
+link = "https://github.com/jeromerodrigo"
+img = "img/github.png"
 
 [[socials]]
 name = "HackerRank"

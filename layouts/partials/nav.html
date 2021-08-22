@@ -1,11 +1,11 @@
-<header id="nav-border" class="p-3">
-    <nav id="nav" class="nav">
-        <div class="col-10">
+<header id="nav-border" class="p-3 text-center">
+    <nav id="nav" class="nav-bar">
+        <div class="float-md-start d-inline-block">
             <a class="nav-link" href="/">{{ .Site.Params.nameLower }}</a>
         </div>
-        <div class="row">
+        <div class="float-md-end">
             {{ range .Site.Menus.main }}
-            <div class="col">
+            <div class="d-inline-block">
                 <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
             </div>
             {{ end }}
