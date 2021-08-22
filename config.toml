@@ -1,4 +1,4 @@
-baseURL = "https://jeromerodrigo.xyz/"
+baseURL = "https://jeromerodrigo.com/"
 languageCode = "en"
 title = "Jerome Rodrigo | Full Stack Software Developer"
 
@@ -10,10 +10,16 @@ title = "Jerome Rodrigo | Full Stack Software Developer"
         weight = 1
 
     [[menu.main]]
+        name = "About"
+        pre = "about"
+        url = "/about/"
+        weight = 2
+
+    [[menu.main]]
         name = "Blog"
         pre = "edit"
         url = "/blog/"
-        weight = 2
+        weight = 3
 
 [params]
     description = """\
