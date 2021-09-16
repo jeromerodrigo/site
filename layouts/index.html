@@ -1,10 +1,22 @@
 {{ define "main" }}
 
 <div class="gap"></div>
-{{ .Scratch.Set "CTAText" "About me »" }}
-{{ .Scratch.Set "CTALink" "/about" }}
-{{ partial "hero.html" . }}
+
+<section class="row align-items-center">
+    <div class="col text-center">
+        <div class="m-3">
+            <h1>Jerome Rodrigo</h1>
+            <h5 class="mt-2 mb-4 text-muted">{{ .Site.Data.home.jumboSubtitle }}</h5>
+            
+            <a class="btn btn-primary" href="/about" rel="noreferrer">
+                About me »
+            </a>
+        </div>
+    </div>
+</section>
+
 <div class="gap"></div>
+
 <section id="recent-articles" class="list">
     <div class="text-center">
         <h2>Recent posts</h2>

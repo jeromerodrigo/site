@@ -1,10 +1,25 @@
 {{ define "main" }}
 
 <div class="gap"></div>
-{{ .Scratch.Set "CTAText" "Get in touch »" }}
-{{ .Scratch.Set "CTALink" .Site.Params.linkedinUrl }}
-{{ .Scratch.Set "CTAExternalLink" "true" }}
-{{ partial "hero.html" . }}
+
+<section id="home-jumbotron" class="row align-items-center">
+    <div class="col-sm-7">
+        <div class="m-3">
+            <h3>{{ .Site.Data.home.jumboGreeting }}</h3>
+            <h1>{{ .Site.Data.home.jumboTitle }}</h1>
+            <h5 class="mt-2 mb-4 text-muted">{{ .Site.Data.home.jumboSubtitle | markdownify }}</h5>
+            
+            <a class="btn btn-primary" href="{{ .Site.Params.linkedinUrl }}" target="_blank" rel="noreferrer">
+                Get in touch »
+            </a>
+        </div>
+    </div>
+    <div class="col">
+        {{ $profile := "img/profile.jpg" | relURL }}
+        <img src="{{ $profile }}" class="profile-picture" alt="Profile picture of {{ .Site.Params.nameLower }}" />
+    </div>
+</section>
+
 <div class="gap"></div>
 <section id="home-description" class="row m-3 align-items-center">
     <div class="col-sm p-3 order-sm-last">
