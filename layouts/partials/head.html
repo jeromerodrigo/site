@@ -11,5 +11,5 @@
     <link rel="stylesheet" href="{{ $reset }}">
     {{ $style := "css/style.css" | relURL }}
     <link rel="stylesheet" href="{{ $style }}">
-    <title>{{ .Title }} {{ .Site.Params.titlePostfix }}</title>
+    <title>{{ .Title }}{{ if .Params.title }} {{ .Site.Params.titlePostfix }}{{ end }}</title>
 </head>

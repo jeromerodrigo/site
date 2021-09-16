@@ -1,6 +1,6 @@
 baseURL = "https://jeromerodrigo.com/"
 languageCode = "en"
-title = "Jerome Rodrigo | Full Stack Software Developer"
+title = "Jerome Rodrigo · Full Stack Software Developer"
 
 [menu]
     [[menu.main]]
