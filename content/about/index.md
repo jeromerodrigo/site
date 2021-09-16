@@ -1,5 +1,5 @@
 ---
-title: "About me"
+title: "About"
 type: "about"
-summary: "New personal site & fun with hugo static site generator."
+summary: "About · Jerome Rodrigo | Full Stack Software Developer"
 ---

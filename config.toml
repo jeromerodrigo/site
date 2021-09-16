@@ -22,9 +22,7 @@ title = "Jerome Rodrigo | Full Stack Software Developer"
         weight = 3
 
 [params]
-    description = """\
-    The personal site & blog of jeromerodrigo.\
-    """
+    description = "Personal site & blog of jeromerodrigo."
 
     dateFormat = "Jan 2, 2006"
 
@@ -34,6 +32,8 @@ title = "Jerome Rodrigo | Full Stack Software Developer"
     footerCopyright = "Jerome Rodrigo"
 
     linkedinUrl = "https://www.linkedin.com/in/jeromerodrigo"
+
+    titlePostfix = "· Jerome Rodrigo"
 
 [taxonomies]
     tag = "tags"
