@@ -1,6 +1,6 @@
-<footer class="footer">
+<footer class="footer bg-black">
     <div>
-        <p>{{ .Site.Params.footerLine | markdownify }}</p>
-        <small>&copy; {{ .Date.Format "2006" }} {{ .Site.Params.footerCopyright }}</small>
+        <p class="text-white">{{ .Site.Params.footerLine | markdownify }}</p>
+        <small class="text-white">&copy; {{ now.Format "2006" }} {{ .Site.Params.footerCopyright }}</small>
     </div>
 </footer>

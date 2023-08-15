@@ -1,12 +1,12 @@
-<header id="nav-border" class="p-3 text-center">
+<header id="nav-border" class="text-center">
     <nav id="nav" class="nav-bar">
         <div class="float-md-start d-inline-block">
-            <a class="nav-link" href="/">{{ .Site.Params.nameLower }}</a>
+            <a class="p-3 nav-link font-monospace fst-italic bg-black text-white" href="/">{{ .Site.Params.nameLower }}</a>
         </div>
         <div class="float-md-end">
             {{ range .Site.Menus.main }}
-            <div class="d-inline-block">
-                <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+            <div class="p-3 ms-3 d-inline-block">
+                <a class="nav-link font-monospace" href="{{ .URL }}">{{ .Name }}</a>
             </div>
             {{ end }}
         </div>

@@ -2,7 +2,6 @@
 body {
     position: relative;
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(235,235,235,1) 65%, rgb(255, 255, 255) 100%);
-    font-family: Tahoma, sans-serif;
     min-height: 100vh;
 }
 
@@ -29,7 +28,7 @@ h2 {
 }
 
 .nav-bar {
-    min-height: 2rem;
+    min-height: 3rem;
 }
 
 .nav-link {
@@ -62,8 +61,6 @@ h2 {
     font-size: small;
     padding: 1rem;
     width: 100%;
-    background-color: black !important;
-    color: white;
     position: absolute;
     bottom: 0;
     box-shadow: 0 -2px 2px 0 black;
@@ -102,4 +99,19 @@ a.btn {
 
 #home-certifications img {
     max-height: 10rem;
+}
+
+#home-tech .badge {
+    -webkit-transition:  -webkit-transform .2s ease-out;
+    -moz-transition: -moz-transform .2s ease-out;
+    -o-transition: -o-transform .2s ease-out;
+    -ms-transition: -ms-transform .2s ease-out; 
+    transition: transform .2s ease-out; 
+}
+
+#home-tech .badge:hover {
+    -webkit-transform:scale(1.25);
+    -moz-transform:scale(1.25);
+    -o-transform:scale(1.25);
+    transform:scale(1.25);
 }

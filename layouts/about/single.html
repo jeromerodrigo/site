@@ -5,9 +5,9 @@
 <section id="home-jumbotron" class="row align-items-center">
     <div class="col-sm-7">
         <div class="m-3">
-            <h3>{{ .Site.Data.home.jumboGreeting }}</h3>
-            <h1>{{ .Site.Data.home.jumboTitle }}</h1>
-            <h5 class="mt-2 mb-4 text-muted">{{ .Site.Data.home.jumboSubtitle | markdownify }}</h5>
+            <h3>{{ .Site.Data.about.jumboGreeting }}</h3>
+            <h1>{{ .Site.Data.about.jumboTitle }}</h1>
+            <h5 class="mt-2 mb-4 text-muted">{{ .Site.Data.about.jumboSubtitle | markdownify }}</h5>
             
             <a class="btn btn-primary" href="{{ .Site.Params.linkedinUrl }}" target="_blank" rel="noreferrer">
                 Get in touch »
@@ -23,9 +23,9 @@
 <div class="gap"></div>
 <section id="home-description" class="row m-3 align-items-center">
     <div class="col-sm p-3 order-sm-last">
-        <h2 class="mb-3">{{ .Site.Data.home.descriptionHeading }}</h2>
+        <h2 class="mb-3">{{ .Site.Data.about.descriptionHeading }}</h2>
 
-        {{ range .Site.Data.home.descriptions }}
+        {{ range .Site.Data.about.descriptions }}
         <p>{{ . | markdownify }}</p>
         {{ end }}
     </div>
@@ -35,7 +35,7 @@
                 <h1>{{ sub now.Year 2014 }}+</h1>
                 <p class="fs-5">years of working experience</p>
             </div>
-            {{ range .Site.Data.home.companies }}
+            {{ range .Site.Data.about.companies }}
             {{ $src := index .img | relURL }}
             <div class="p-3 company col">
                 <img src={{ $src }} alt="{{ index .name }}" />
@@ -47,10 +47,10 @@
 <div class="gap"></div>
 <section id="home-tech">
     <div class="mb-5 text-center">
-        <h2>My Toolbox</h2>
+        <h2>🧰 My Toolbox</h2>
     </div>
     <div class="row text-center">
-        {{ range .Site.Data.home.tech }}
+        {{ range .Site.Data.about.tech }}
         <div class="mb-3 col-md">
             <h3>{{ index .categoryName }}</h3>
             {{ range index .items }}
@@ -63,11 +63,11 @@
 <div class="gap"></div>
 <section id="home-my-work">
     <div class="mb-5 text-center">
-        <h2>My Work</h2>
-        <p>{{ .Site.Data.home.myWorkText }}</p>
+        <h2>💼 My Work</h2>
+        <p>{{ .Site.Data.about.myWorkText }}</p>
     </div>
     <div class="row">
-        {{ range .Site.Data.home.projects }}
+        {{ range .Site.Data.about.projects }}
         <div class="col-12 col-sm-6 col-md-4">
             <div class="card mb-3">
                 {{ $filename := index .img }}
@@ -105,18 +105,18 @@
 <div class="gap"></div>
 <section id="home-certifications">
     <div class="text-center mb-5">
-        <h2>Certifications</h2>
+        <h2>🎓 Certifications</h2>
     </div>
     <div class="row mb-3">
-        {{ range .Site.Data.home.certifications }}
+        {{ range .Site.Data.about.certifications }}
         <div class="col-md-6">
             <div class="card mb-3">
                 <div class="row g-0">
-                    <div class="col-4">
+                    <div class="col-4 p-3">
                         {{ $src := index .img | relURL }}
                         <img src="{{ $src }}" alt="{{ index .name }}">
                     </div>
-                    <div class="col-8">
+                    <div class="col-8 p-3">
                         <div class="card-body">
                             <h5 class="card-title">{{ index .name }}</h5>
                             <p class="card-text">{{ index .issuer }} <small class="text-muted">- {{ index .date }}</small></p>
@@ -136,10 +136,10 @@
 <div class="gap"></div>
 <section id="home-contact">
     <div class="text-center mb-5">
-        <h2>Get in touch</h2>
+        <h2>🤝 Get in touch</h2>
     </div>
     <div class="text-center mb-3">
-        {{ range .Site.Data.home.socials }}
+        {{ range .Site.Data.about.socials }}
         <a href="{{ index .link }}" target="_blank" rel="noreferrer">
             {{ $logo := index .img | relURL }}
             <img class="m-1 badge-icon" src="{{ $logo }}" alt="{{ index .name }}" />

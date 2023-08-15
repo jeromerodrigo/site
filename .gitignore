@@ -5,11 +5,16 @@
 # Generated files by hugo
 /public/
 /resources/_gen/
+/assets/jsconfig.json
+hugo_stats.json
 
 # Executable may be added to repository
 hugo.exe
 hugo.darwin
 hugo.linux
+
+# Temporary lock file while building
+/.hugo_build.lock
 
 ### VisualStudioCode ###
 .vscode/*
@@ -17,10 +22,13 @@ hugo.linux
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-*.code-workspace
+!.vscode/*.code-snippets
 
 # Local History for Visual Studio Code
 .history/
+
+# Built Visual Studio Code Extensions
+*.vsix
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files

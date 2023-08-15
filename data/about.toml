@@ -76,7 +76,7 @@ vid = ""
 
 [[tech]]
 categoryName = "Languages"
-items = [ "Java", "C#", "Kotlin", "SQL", "HTML/CSS", "JavaScript", "TypeScript", "Python" ]
+items = [ "Java", "C#", "Kotlin", "SQL", "HTML/CSS", "JavaScript", "TypeScript", "Python", "Go" ]
 
 [[tech]]
 categoryName = "Frameworks & Tools"
@@ -84,7 +84,7 @@ items = [ "React", "Serverless", "Spring", "NodeJS", "Docker", "Selenium", "Open
 
 [[tech]]
 categoryName = "Techniques"
-items = [ "Agile", "Kanban", "Scrum", "Pair Programming", "SOLID", "MVC" ]
+items = [ "Agile", "Kanban", "Scrum", "Pair Programming", "SOLID", "MVC", "CI/CD" ]
 
 [[companies]]
 name = "Inscale Asia Sdn. Bhd."
@@ -103,17 +103,24 @@ name = "ServiceRocket"
 img = "img/servicerocket.png"
 
 [[certifications]]
+name = "AWS Certified Solutions Architect - Associate"
+issuer = "Amazon Web Services"
+date = "June 2023"
+link = "https://www.credly.com/badges/edced210-d4ca-41b9-b1ca-0e4e4ba92d6d"
+img = "img/aws-saa.png"
+
+[[certifications]]
 name = "MCSA: Web Applications - Certified 2018"
 issuer = "Microsoft"
 date = "Sep 2018"
-link = "https://www.youracclaim.com/badges/ae560e94-caf8-4a15-bddf-c103c54ca17b/linked_in_profile"
+link = "https://www.credly.com/badges/ae560e94-caf8-4a15-bddf-c103c54ca17b"
 img = "img/microsoft.svg"
 
 [[certifications]]
 name = "MCSD: App Builder - Certified 2018"
 issuer = "Microsoft"
 date = "Sep 2018"
-link = "https://www.youracclaim.com/badges/fd35850c-e79a-4b5b-b18f-8e76142e9103/linked_in_profile"
+link = "https://www.credly.com/badges/fd35850c-e79a-4b5b-b18f-8e76142e9103"
 img = "img/microsoft.svg"
 
 [[certifications]]
@@ -127,7 +134,7 @@ img = "img/icagile.jpg"
 name = "Microsoft Specialist: Programming in C# Specialist"
 issuer = "Microsoft"
 date = "Oct 2013"
-link = "https://www.youracclaim.com/badges/9f39880a-88ea-4103-a4a8-3c7777de502d/public_url"
+link = "https://www.credly.com/badges/9f39880a-88ea-4103-a4a8-3c7777de502d"
 img = "img/microsoft.svg"
 
 [[certifications]]
