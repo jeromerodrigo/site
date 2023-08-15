@@ -23,6 +23,7 @@ title = "Jerome Rodrigo · Full Stack Software Developer"
 
 [params]
     description = "Personal site & blog of jeromerodrigo."
+    images = ["img/profile.webp"]
 
     dateFormat = "Jan 2, 2006"
 

@@ -10,4 +10,6 @@
     {{ $style := "css/style.css" | relURL }}
     <link rel="stylesheet" href="{{ $style }}">
     <title>{{ .Title }}{{ if .Params.title }} {{ .Site.Params.titlePostfix }}{{ end }}</title>
+
+    {{ template "_internal/opengraph.html" . }}
 </head>
