@@ -86,6 +86,10 @@ items = [ "React", "Serverless", "Spring", "NodeJS", "Docker", "Selenium", "Open
 categoryName = "Techniques"
 items = [ "Agile", "Kanban", "Scrum", "Pair Programming", "SOLID", "MVC", "CI/CD" ]
 
+[[tech]]
+categoryName = "Platforms"
+items = [ "Amazon Web Services", "Atlassian", "Salesforce", "Linux" ]
+
 [[companies]]
 name = "Inscale Asia Sdn. Bhd."
 img = "img/inscale-logo.svg"
