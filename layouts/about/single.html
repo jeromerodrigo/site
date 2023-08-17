@@ -14,9 +14,9 @@
             </a>
         </div>
     </div>
-    <div class="col">
+    <div class="col p-3">
         {{ $profile := "img/profile.webp" | relURL }}
-        <img src="{{ $profile }}" class="profile-picture" alt="Profile picture of {{ .Site.Params.nameLower }}" />
+        <img src="{{ $profile }}" class="profile-picture" alt="Picture of {{ .Site.Params.nameLower }}" />
     </div>
 </section>
 
@@ -24,20 +24,19 @@
 <section id="home-description" class="row m-3 align-items-center">
     <div class="col-sm p-3 order-sm-last">
         <h2 class="mb-3">{{ .Site.Data.about.descriptionHeading }}</h2>
-
         {{ range .Site.Data.about.descriptions }}
         <p>{{ . | markdownify }}</p>
         {{ end }}
     </div>
     <div class="col-sm">
         <div class="row align-items-center">
-            <div class="col card p-3 company">
+            <div class="col p-3 company card">
                 <h1>{{ sub now.Year 2014 }}+</h1>
-                <p class="fs-5">years of working experience</p>
+                <p>years of working experience</p>
             </div>
             {{ range .Site.Data.about.companies }}
             {{ $src := index .img | relURL }}
-            <div class="p-3 company col">
+            <div class="col p-3 company">
                 <img src={{ $src }} alt="{{ index .name }}" />
             </div>
             {{ end }}

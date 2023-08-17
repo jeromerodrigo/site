@@ -50,11 +50,24 @@ h2 {
     width: 2.5rem;
 }
 
-.company {
-    min-width: 10rem;
-    max-width: 12rem;
-    max-height: 12rem;
-    display: inline-block;
+@media (max-width: 576px) {
+    .company {
+        min-width: 8rem;
+        max-width: 10rem;
+        display: inline-block;
+    }
+
+    .company h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media (min-width: 576px) {
+    .company {
+        min-width: 10rem;
+        max-width: 12rem;
+        display: inline-block;
+    }    
 }
 
 .footer {
