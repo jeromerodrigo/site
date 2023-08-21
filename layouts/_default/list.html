@@ -2,12 +2,12 @@
 
 <section class="m-3 list">
     <h2 class="mb-3">{{ .Title }}</h2>
-    <div class="row">
+    <div class="row row-cols-auto">
         {{ range .Pages.ByPublishDate.Reverse }}
         <div class="col p-3">
             <div>
                 <a href="{{ .RelPermalink }}">
-                    <h3>{{ .Title }}</h3>
+                    <h4>{{ .Title }}</h4>
                 </a>
                 {{ partial "date-and-tags.html" . }}
             </div>
