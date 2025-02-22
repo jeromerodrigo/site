@@ -38,3 +38,8 @@ title = "Jerome Rodrigo · Full Stack Software Developer"
 
 [taxonomies]
     tag = "tags"
+
+[imaging]
+    [imaging.exif]
+        disableDate = false
+        disableLatLong = false

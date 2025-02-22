@@ -80,7 +80,7 @@ items = [ "Java", "C#", "Kotlin", "SQL", "HTML/CSS", "JavaScript", "TypeScript",
 
 [[tech]]
 categoryName = "Frameworks & Tools"
-items = [ "React", "Serverless", "Spring", "NodeJS", "Docker", "Selenium", "OpenAPI/Swagger" ]
+items = [ "React", "Next.js", "Serverless", "SST", "Spring", "NodeJS", "Docker", "Selenium", "OpenAPI/Swagger" ]
 
 [[tech]]
 categoryName = "Techniques"
@@ -88,23 +88,23 @@ items = [ "Agile", "Kanban", "Scrum", "Pair Programming", "SOLID", "MVC", "CI/CD
 
 [[tech]]
 categoryName = "Platforms"
-items = [ "Amazon Web Services", "Atlassian", "Salesforce", "Linux" ]
+items = [ "Amazon Web Services", "Atlassian", "Salesforce", "Linux", "Miro" ]
 
 [[companies]]
 name = "Inscale Asia Sdn. Bhd."
-img = "img/inscale-logo.svg"
+img = "/images/inscale-logo.svg"
 
 [[companies]]
 name = "SEB Pension"
-img = "img/seb.png"
+img = "/images/seb.svg"
 
 [[companies]]
 name = "Danske Bank"
-img = "img/danske-bank-logo.svg"
+img = "/images/danske-bank-logo.svg"
 
 [[companies]]
 name = "ServiceRocket"
-img = "img/servicerocket.png"
+img = "/images/servicerocket.jpg"
 
 [[certifications]]
 name = "AWS Certified Solutions Architect - Associate"

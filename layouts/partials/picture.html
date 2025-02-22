@@ -1,0 +1,25 @@
+
+{{ $class := .Scratch.Get "class" }}
+{{ $alt := .Scratch.Get "alt" }}
+{{ $path := .Scratch.Get "path" }}
+{{ $image := resources.Get $path }}
+{{ $webp_sm := $image.Resize "600x webp q75" }}
+{{ $webp_lg := $image.Resize "1000x webp q75" }}
+{{ $fallback := $image.Resize "800x jpg q90" }}
+
+<picture>
+  <source 
+    media="(min-width: 800px)" 
+    srcset="{{ $webp_lg.RelPermalink }}" 
+    type="image/webp">
+  <source 
+    media="(max-width: 799px)" 
+    srcset="{{ $webp_sm.RelPermalink }}" 
+    type="image/webp">
+  <img 
+    class="{{ $class }}"
+    src="{{ $fallback.RelPermalink }}" 
+    alt="{{ $alt }}"
+    loading="lazy"
+    decoding="async">
+</picture>
