@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<div class="gap"></div>
+{{ partialCached "gap.html" . }}
 
 <section id="home-jumbotron" class="row align-items-center">
     <div class="col-sm-7">
@@ -22,7 +22,8 @@
     </div>
 </section>
 
-<div class="gap"></div>
+{{ partialCached "gap.html" . }}
+
 <section id="home-description" class="row m-3 align-items-center">
     <div class="col-sm p-3 order-sm-last">
         <h2 class="mb-3">{{ .Site.Data.about.descriptionHeading }}</h2>
@@ -66,7 +67,9 @@
         {{ end }}
     </div>
 </section>
-<div class="gap"></div>
+
+{{ partialCached "gap.html" . }}
+
 <section id="home-my-work">
     <div class="mb-5 text-center">
         <h2>💼 My Work</h2>
@@ -80,7 +83,7 @@
                 {{ if ne $filename "" }}
                     {{ $url := print "/images/" $filename }}
                     {{ $image :=  resources.Get $url }}
-                    {{ $image_sm := $image.Resize "400x webp q75" }}
+                    {{ $image_sm := $image.Resize "400x webp q75 lanczos" }}
                     <img 
                         src="{{ $image_sm.RelPermalink }}" 
                         class="card-img-top" 
@@ -115,7 +118,9 @@
         {{ end }}
     </div>
 </section>
-<div class="gap"></div>
+
+{{ partialCached "gap.html" . }}
+
 <section id="home-certifications">
     <div class="text-center mb-5">
         <h2>🎓 Certifications</h2>
@@ -126,9 +131,10 @@
             <div class="card mb-3">
                 <div class="row g-0">
                     <div class="col-4 p-3">
-                        {{ $src := index .img | relURL }}
+                        {{ $image := resources.Get .img }}
+                        {{ $image_sm := $image.Resize "200x webp q75 lanczos" }}
                         <img 
-                            src="{{ $src }}" 
+                            src="{{ $image_sm.RelPermalink }}" 
                             alt="{{ index .name }}"
                             loading="lazy"
                             decoding="async"
@@ -151,7 +157,49 @@
     </div>
     
 </section>
-<div class="gap"></div>
+
+{{ partialCached "gap.html" . }}
+
+<section id="home-awards">
+
+    <div class="text-center mb-5">
+        <h2>🏆 Awards</h2>
+    </div>
+
+    {{ range .Site.Data.about.awards }}
+
+    <div class="card mb-3">
+        <div class="row g-0">
+            <div class="col-md-4">
+            {{ $image := resources.Get .image }}
+            {{ $image_md := $image.Resize "500x webp q75 lanczos" }}
+            <img 
+                src="{{ $image_md.RelPermalink }}"
+                class="img-fluid rounded-start"
+                alt="Award image"
+                loading="lazy"
+                decoding="async"
+            />
+            </div>
+            <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{ .name }}</h5>
+                <p class="card-text">{{ .givenby }} <small class="text-muted">- {{ .date }}</small></p>
+
+                {{ if ne .link "" }}
+                <a href="{{ index .link }}" rel="noreferrer" target="_blank">See award</a>
+                {{ end }}
+            </div>
+            </div>
+        </div>
+    </div>
+
+    {{ end }}
+
+</section>
+
+{{ partialCached "gap.html" . }}
+
 <section id="home-contact">
     <div class="text-center mb-5">
         <h2>🤝 Get in touch</h2>
@@ -159,12 +207,19 @@
     <div class="text-center mb-3">
         {{ range .Site.Data.about.socials }}
         <a href="{{ index .link }}" target="_blank" rel="noreferrer">
-            {{ $logo := index .img | relURL }}
-            <img class="m-1 badge-icon" src="{{ $logo }}" alt="{{ index .name }}" />
+            {{ $logo := resources.Get .img }}
+            {{ $logo_sm := $logo.Resize "50x webp q75 lanczos" }}
+            <img 
+                class="m-1 badge-icon" 
+                src="{{ $logo_sm.RelPermalink }}" 
+                alt="{{ index .name }}" 
+                loading="lazy"
+                decoding="async"
+            />
         </a>
         {{ end }}        
     </div>
 </section>
-<div class="gap"></div>
+{{ partialCached "gap.html" . }}
 
 {{ end }}
