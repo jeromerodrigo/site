@@ -4,11 +4,6 @@ jumboSubtitle = "Full Stack Software Developer"
 
 descriptionHeading = "I specialise in building web apps."
 
-myWorkText = """\
-    I enjoy spending my free time working on various side projects. \
-    Here's a few notable ones I've done over the past few years. \
-    """
-
 descriptions = [
 """\
 It's my passion to solve challenging problems that help real people. \
@@ -21,6 +16,18 @@ I believe in servant leadership and trust smart people to do great work. \
 Currently I'm focusing on the technical side of things as a Software Engineer at [ServiceRocket](https://servicerocket.com).
 """
 ]
+
+[[projects]]
+name = "Salesforce for Miro"
+period = "2024 - 2025"
+description = """
+A Miro app that integrates Salesforce with Miro. Interact with Salesforce
+objects directly in Miro with native app cards on the canvas. Support for
+2-way sync also ensures seamless updates with the need for additional setup.
+"""
+link = "https://miro.com/marketplace/salesforce-for-miro/"
+img = "sfm.png"
+vid = ""
 
 [[projects]]
 name = "[Design] OptiTask 2"
